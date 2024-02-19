@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню Ресторана Домашеяя кухня на Думке</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Меню Ресторана Домашеяя кухня на Думке</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#starters">Закуски</a></li>
+            <li><a href="#mains">Основные блюда</a></li>
+            <li><a href="#desserts">Десерты</a></li>
+            <li><a href="#drinks">Напитки</a></li>
+        </ul>
+    </nav>
+    <form id="orderForm">
+        <section id="starters">
+            <h2>Закуски</h2>
+            <ul>
+                <li><input type="checkbox" name="starter" value="Картофель Фри"> Картофель Фри</li>
+                <li><input type="checkbox" name="starter" value="Кальмары"> Кальмары</li>
+                <li><input type="checkbox" name="starter" value="Брускетта"> Брускетта</li>
+            </ul>
+        </section>
+        <section id="mains">
+            <h2>Основные блюда</h2>
+            <ul>
+                <li><input type="checkbox" name="main" value="Стейк"> Стейк</li>
+                <li><input type="checkbox" name="main" value="Паста"> Паста</li>
+                <li><input type="checkbox" name="main" value="Рыба"> Рыба</li>
+            </ul>
+        </section>
+        <section id="desserts">
+            <h2>Десерты</h2>
+            <ul>
+                <li><input type="checkbox" name="dessert" value="Чизкейк"> Чизкейк</li>
+                <li><input type="checkbox" name="dessert" value="Тирамису"> Тирамису</li>
+                <li><input type="checkbox" name="dessert" value="Фруктовый салат"> Фруктовый салат</li>
+            </ul>
+        </section>
+        <section id="drinks">
+            <h2>Напитки</h2>
+            <ul>
+                <li><input type="checkbox" name="drink" value="Вино"> Вино</li>
+                <li><input type="checkbox" name="drink" value="Пиво"> Пиво</li>
+                <li><input type="checkbox" name="drink" value="Коктейль"> Коктейль</li>
+            </ul>
+        </section>
+        <button type="submit">Сформировать заказ</button>
+    </form>
+
+    <!-- Модальное окно для отображения заказа -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="orderSummary"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
