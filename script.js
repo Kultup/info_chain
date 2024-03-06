@@ -1,49 +1,31 @@
-// Добавленный JavaScript для отображения и скрытия модального окна
-document.getElementById('orderForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    var modal = document.getElementById("orderModal");
-    var orderSummary = document.getElementById('orderSummary');
-    orderSummary.innerHTML = '<h2>Ваш заказ:</h2>';
-    
-    var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
-    if (checkboxes.length === 0) {
-        orderSummary.innerHTML += '<p>Вы не выбрали ничего.</p>';
-    } else {
-        var orderItems = '<ul>';
-        checkboxes.forEach(function(checkbox) {
-            orderItems += '<li>' + checkbox.value + '</li>';
-        });
-        orderItems += '</ul>';
-        orderSummary.innerHTML += orderItems;
-    }
+document.addEventListener("DOMContentLoaded", function() {
+    const sites = [
+        { name: "mrii-chain.daocloud.it", version: "8.3.7" },
+        { name: "mrii-vinnitsa.daocloud.it", version: "8.1.7" },
+        { name: "mrii-kyiv.daocloud.it", version: "8.1.7" },
+        { name: "mrii-lutsk.syrve.online", version: "8.3.7" },
+        { name: "mrii-lviv.daocloud.it", version: "8.1.7" },
+        { name: "mrii-odesa-1.syrve.online", version: "8.3.3 савінйон" },
+        { name: "mrii-odesa-2.syrve.online", version: "8.3.7" },
+        { name: "mrii-ternopil.daocloud.it", version: "8.1.7" },
+        { name: "mrii-khm.syrve.online", version: "8.1.7" },
+        { name: "mrii-chernivtsi.daocloud.it", version: "8.1.7" },
+        { name: "fun-planet.syrve.online", version: "8.3.6" },
+        { name: "mrii-zhytomyr.syrve.online", version: "8.3.7" },
+        { name: "mrii-madagascar.daocloud.it", version: "" }
+    ];
 
-    // Проверка на наличие алкогольных напитков
-    var alcoholSelected = Array.from(checkboxes).some(function(checkbox) {
-        return checkbox.name === "drink";
+    const siteList = document.getElementById("siteList");
+
+    sites.forEach(site => {
+        const li = document.createElement("li");
+        const div = document.createElement("div");
+        div.classList.add("site");
+        div.innerHTML = `
+            <h2>${site.name}</h2>
+            <p>Version: ${site.version}</p>
+        `;
+        li.appendChild(div);
+        siteList.appendChild(li);
     });
-
-    if (alcoholSelected) {
-        // Показываем предупреждение и предлагаем пользователю подтвердить выбор
-        if (confirm("Вы уверены? После предыдущего опыта у вас жопа 3 дня болела. Вы уверены, что хотите выбрать алкогольные напитки?")) {
-            modal.style.display = "block";
-        }
-    } else {
-        // Если алкогольные напитки не выбраны, показываем модальное окно без предупреждения
-        modal.style.display = "block";
-    }
-});
-
-// Закрыть модальное окно при нажатии на кнопку "Close"
-document.getElementsByClassName("close")[0].addEventListener('click', function() {
-    var modal = document.getElementById("orderModal");
-    modal.style.display = "none";
-});
-
-// Закрыть модальное окно при щелчке вне его области
-window.addEventListener('click', function(event) {
-    var modal = document.getElementById("orderModal");
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
 });
