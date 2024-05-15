@@ -1,40 +1,109 @@
+/* Body Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 20px;
     background-color: #f8f9fa;
+    line-height: 1.6;
 }
 
+/* Header Styles */
 h1 {
     text-align: center;
-    color: #343a40;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-family: 'Rock Salt', cursive;
 }
 
+/* Table Styles */
 table {
     width: 80%;
-    margin: 20px auto;
-    border-collapse: collapse;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
-    padding: 10px;
-    border-bottom: 1px solid #dee2e6;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
     text-align: left;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 th {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #ffcc00;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
+td {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Hover Effect */
+tr:hover td {
+    background-color: rgba(255, 204, 0, 0.1);
+    transform: scale(1.02);
+}
+
+/* Link Styles */
 a {
     color: #007bff;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 a:hover {
+    color: #0056b3;
     text-decoration: underline;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+}
+
+.button:hover {
+    background-color: #ffd633;
+    border-color: #ffd633;
+}
+
+.button-secondary {
+    background-color: #e83e8c;
+    border-color: #e83e8c;
+    color: #fff;
+}
+
+.button-secondary:hover {
+    background-color: #d6327b;
+    border-color: #d6327b;
+}
+
+.button-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+
+.button-danger:hover {
+    background-color: #bd2130;
+    border-color: #bd2130;
 }
