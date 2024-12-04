@@ -1,0 +1,72 @@
+/* Body Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+h1 {
+    text-align: center;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    font-size: 36px;
+    font-family: 'Rock Salt', cursive;
+}
+
+/* Column Layout */
+.container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Column Styles */
+.column {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+
+/* Container Styles */
+.container, .container-2, .container-3 {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container-2, .container-3 {
+    background-color: #f1f1f1;
+}
+
+/* Hover Effect */
+.container:hover, .container-2:hover, .container-3:hover {
+    background-color: #ffd633;
+    transform: scale(1.05);
+}
+
+/* Text Styles */
+h2 {
+    color: #333;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Link Styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
