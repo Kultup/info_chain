@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const password = "2601"; // Replace with your desired password
+    const password = "2601"; // Замініть на ваш пароль
 
-    const userPassword = prompt("Enter the password to access this page:");
+    // Запитуємо користувача ввести пароль
+    const userPassword = prompt("Введіть пароль для доступу до цієї сторінки:");
     if (userPassword !== password) {
-        alert("Incorrect password. Access denied.");
-        document.body.innerHTML = "<h1>Access Denied</h1>";
-        return;
+        alert("Невірний пароль. Доступ заборонено.");
+        document.body.innerHTML = "<h1>Доступ заборонено</h1>";
+        return; // Виходимо з функції, якщо пароль неправильний
     }
 
     const sites = [
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
         div.classList.add("site");
         div.innerHTML = `
             <h2>${site.name}</h2>
-            <p>Version: ${site.version}</p>
+            <p>Версія: ${site.version}</p>
         `;
         li.appendChild(div);
         siteList.appendChild(li);
