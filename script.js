@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const password = "your_password"; // Replace with your desired password
+    const password = "2601"; // Replace with your desired password
 
     const userPassword = prompt("Enter the password to access this page:");
     if (userPassword !== password) {
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.innerHTML = "<h1>Access Denied</h1>";
         return;
     }
-document.addEventListener("DOMContentLoaded", function() {
+
     const sites = [
         { name: "mrii-chain.daocloud.it", version: "8.3.7" },
         { name: "mrii-vinnitsa.daocloud.it", version: "8.1.7" },
