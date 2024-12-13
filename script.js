@@ -1,15 +1,5 @@
+
 document.addEventListener("DOMContentLoaded", function() {
-    const password = "2601"; // Ваш пароль
-
-    // Запитуємо користувача ввести пароль
-    const userPassword = prompt("Введіть пароль для доступу до цієї сторінки:");
-    if (userPassword !== password) {
-        alert("Невірний пароль. Доступ заборонено.");
-        document.body.innerHTML = "<h1>Доступ заборонено</h1>";
-        return; // Виходимо з функції, якщо пароль неправильний
-    }
-
-    // Дані сайтів
     const sites = [
         { name: "mrii-chain.daocloud.it", version: "8.3.7" },
         { name: "mrii-vinnitsa.daocloud.it", version: "8.1.7" },
@@ -34,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         div.classList.add("site");
         div.innerHTML = `
             <h2>${site.name}</h2>
-            <p>Версія: ${site.version}</p>
+            <p>Version: ${site.version}</p>
         `;
         li.appendChild(div);
         siteList.appendChild(li);
