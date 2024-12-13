@@ -8,7 +8,20 @@
 </head>
 <body>
     <h1>MRII Chains Information</h1>
-    <p> <a href="baf.html" class="button">Go to BAF Page</a></p>
+    <p><a href="#" class="button" onclick="checkPassword()">Go to BAF Page</a></p>
+
+<script>
+    function checkPassword() {
+        const password = prompt("Введите пароль:");
+        const correctPassword = "2601"; // Установите ваш пароль здесь
+        if (password === correctPassword) {
+            window.location.href = "baf.html"; // Перенаправление на нужную страницу
+        } else {
+            alert("Неверный пароль!");
+        }
+    }
+</script>
+
     <table>
         <thead>
             <tr>
