@@ -24,9 +24,9 @@
                 <td>mrii-chain.daocloud.it</td>
                 <td><a href="https://www.daolog.net/syrve/888/888_Chain_BackOffice.zip">Chain</a></td>
                 <td>Чейн</td>
-                </td>
             </tr>
-                        <td>2</td>
+            <tr>
+                <td>2</td>
                 <td>mrii-kyiv-2.syrve.online</td>
                 <td><a href="https://www.daolog.net/syrve/837/837_RMS_BackOffice.zip">837</a></td>
                 <td>Городок</td>
@@ -98,14 +98,14 @@
                 <td>Житомир</td>
             </tr>
             <tr>
-                <td>14</td>
-                <td>mrii-madagascar.daocloud.it</a></td>
+                <td id="copyText">14</td>
+                <td>mrii-madagascar.daocloud.it</td>
                 <td><a href="https://www.daolog.net/syrve/817/817_RMS_BackOffice.zip">817</a></td>
                 <td>Мадагаскар</td>
             </tr>
             <tr>
                 <td>14</td>
-                <td>mrii-lviv-2.syrve.online</a></td>
+                <td>mrii-lviv-2.syrve.online</td>
                 <td><a href="https://www.daolog.net/syrve/888/888_RMS_BackOffice.zip">888</a></td>
                 <td>Львів-2</td>
             </tr>
@@ -154,5 +154,18 @@
             </tr>
         </tbody>
     </table>
+
+    <script>
+    document.getElementById("copyText").addEventListener("click", function() {
+        var text = this.innerText;
+        var textarea = document.createElement("textarea");
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+        alert("Текст скопирован: " + text);
+    });
+    </script>
 </body>
 </html>
