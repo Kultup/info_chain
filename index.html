@@ -59,7 +59,7 @@
                 <td>7</td>
                 <td>mrii-odesa-1.syrve.online</td>
                 <td><a href="https://www.daolog.net/syrve/833/833_RMS_BackOffice.zip">833</a></td>
-                <td>Совінйон</td>
+                <td>Совіньон</td>
             </tr>
             <tr>
                 <td>8</td>
@@ -131,7 +131,7 @@
             <tr>
                 <td>2</td>
                 <td>833</td>
-                <td>Совінйон</td>
+                <td>Совіньон</td>
                 <td><a href="https://www.daolog.net/syrve/833/833_RMS_OfficeFolder.zip">833 Folder</a></td>
             </tr>
             <tr>
@@ -156,16 +156,33 @@
     </table>
 
     <script>
-    document.getElementById("copyText").addEventListener("click", function() {
-        var text = this.innerText;
-        var textarea = document.createElement("textarea");
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
-        alert("Текст скопирован: " + text);
-    });
-    </script>
-</body>
-</html>
+        document.querySelectorAll("td").forEach(function(td) {
+            td.addEventListener("click", function() {
+                var text = this.innerText;
+                var textarea = document.createElement("textarea");
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+        
+                // Показать маленькое окно, что текст скопирован
+                var tooltip = document.createElement("div");
+                tooltip.innerText = "Текст скопирован";
+                tooltip.style.position = "fixed";
+                tooltip.style.bottom = "10px";
+                tooltip.style.right = "10px";
+                tooltip.style.backgroundColor = "black";
+                tooltip.style.color = "white";
+                tooltip.style.padding = "5px";
+                tooltip.style.borderRadius = "5px";
+                document.body.appendChild(tooltip);
+        
+                setTimeout(function() {
+                    document.body.removeChild(tooltip);
+                }, 2000);
+            });
+        });
+        </script>
+        </body>
+        </html>
