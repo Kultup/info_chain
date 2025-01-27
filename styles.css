@@ -1,9 +1,10 @@
 /* Body Styles */
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #0d0d0d;
+    color: #e0e0e0;
     line-height: 1.6;
 }
 p {
@@ -12,11 +13,11 @@ p {
 /* Header Styles */
 h1 {
     text-align: center;
-    color: #333;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color: #00ffcc;
+    text-shadow: 2px 2px 8px rgba(0, 255, 204, 0.7);
     margin-bottom: 30px;
     font-size: 36px;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Table Styles */
@@ -27,44 +28,44 @@ table {
     border-spacing: 0;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
 }
 td {
     padding: 15px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #333;
     text-align: left;
     transition: all 0.3s ease;
     font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Orbitron', sans-serif;
 }
 
 th {
-    background-color: #ffcc00;
-    color: #333;
+    background-color: #00ffcc;
+    color: #0d0d0d;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 td {
-    background-color: #fff;
-    color: #333;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
 }
 
 /* Hover Effect */
 tr:hover td {
-    background-color: rgba(255, 204, 0, 0.1);
+    background-color: rgba(0, 255, 204, 0.1);
     transform: scale(1.02);
 }
 
 /* Link Styles */
 a {
-    color: #007bff;
+    color: #00ffcc;
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #0056b3;
+    color: #00bfa5;
     text-decoration: underline;
 }
 
@@ -72,40 +73,60 @@ a:hover {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ffcc00;
-    color: #333;
-    border: 2px solid #ffcc00;
+    background-color: #00ffcc;
+    color: #0d0d0d;
+    border: 2px solid #00ffcc;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
-    font-family: 'Rock Salt', cursive;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .button:hover {
-    background-color: #ffd633;
-    border-color: #ffd633;
+    background-color: #00e6b8;
+    border-color: #00e6b8;
 }
 
 .button-secondary {
-    background-color: #e83e8c;
-    border-color: #e83e8c;
-    color: #fff;
+    background-color: #ff4081;
+    border-color: #ff4081;
+    color: #0d0d0d;
 }
 
 .button-secondary:hover {
-    background-color: #d6327b;
-    border-color: #d6327b;
+    background-color: #e6396f;
+    border-color: #e6396f;
 }
 
 .button-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    color: #fff;
+    background-color: #ff1744;
+    border-color: #ff1744;
+    color: #0d0d0d;
 }
 
 .button-danger:hover {
-    background-color: #bd2130;
-    border-color: #bd2130;
+    background-color: #e0143b;
+    border-color: #e0143b;
 }
- 
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d0d0d;
+    color: #00ffcc;
+    border-top: 1px solid #333;
+    margin-top: 30px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+footer a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    color: #00bfa5;
+    text-decoration: underline;
+}
