@@ -8,7 +8,8 @@
 </head>
 <body>
     <h1>MRII Chains Information</h1>
-    <p> <a href="baf.html" class="button">Go to BAF Page</a></p>
+    <p><a href="baf.html" class="button">Go to BAF Page</a></p>
+    
     <table>
         <thead>
             <tr>
@@ -98,7 +99,7 @@
                 <td>Житомир</td>
             </tr>
             <tr>
-                <td id="copyText">14</td>
+                <td>14</td>
                 <td>mrii-madagascar.daocloud.it</td>
                 <td><a href="https://www.daolog.net/syrve/817/817_RMS_BackOffice.zip">817</a></td>
                 <td>Мадагаскар</td>
@@ -111,6 +112,7 @@
             </tr>
         </tbody>
     </table>
+
     <h1>Folder Chain Version</h1>
     <table>
         <thead>
@@ -144,7 +146,7 @@
                 <td>4</td>
                 <td>888</td>
                 <td>Львів</td>
-                <td><a href="https://www.daolog.net/syrve/888/888_RMS_OfficeFolder.zip">898 Folder</a></td>
+                <td><a href="https://www.daolog.net/syrve/888/888_RMS_OfficeFolder.zip">888 Folder</a></td>
             </tr>
             <tr>
                 <td>5</td>
@@ -166,16 +168,9 @@
                 document.execCommand("copy");
                 document.body.removeChild(textarea);
         
-                // Показать маленькое окно, что текст скопирован
                 var tooltip = document.createElement("div");
                 tooltip.innerText = "Текст скопирован";
-                tooltip.style.position = "fixed";
-                tooltip.style.bottom = "10px";
-                tooltip.style.right = "10px";
-                tooltip.style.backgroundColor = "black";
-                tooltip.style.color = "white";
-                tooltip.style.padding = "5px";
-                tooltip.style.borderRadius = "5px";
+                tooltip.className = "tooltip";
                 document.body.appendChild(tooltip);
         
                 setTimeout(function() {
@@ -183,6 +178,6 @@
                 }, 2000);
             });
         });
-            </script>
-        </body>
-        </html>
+    </script>
+</body>
+</html>

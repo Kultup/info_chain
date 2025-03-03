@@ -7,9 +7,11 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
 }
+
 p {
     text-align: center;
 }
+
 /* Header Styles */
 h1 {
     text-align: center;
@@ -17,7 +19,6 @@ h1 {
     text-shadow: 2px 2px 8px rgba(0, 255, 204, 0.7);
     margin-bottom: 30px;
     font-size: 36px;
-    font-family: 'Orbitron', sans-serif;
 }
 
 /* Table Styles */
@@ -25,18 +26,18 @@ table {
     width: 80%;
     margin: 0 auto;
     border-collapse: separate;
-    border-spacing: 0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
 }
-td { 
+
+td {
     padding: 15px;
     border-bottom: 1px solid #333;
     text-align: left;
     transition: all 0.3s ease;
     font-size: 16px;
-    font-family: 'Orbitron', sans-serif;
+    background-color: #1a1a1a;
 }
 
 th {
@@ -44,11 +45,6 @@ th {
     color: #0d0d0d;
     text-transform: uppercase;
     font-weight: bold;
-}
-
-td {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
 }
 
 /* Hover Effect */
@@ -80,7 +76,6 @@ a:hover {
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
-    font-family: 'Orbitron', sans-serif;
 }
 
 .button:hover {
@@ -88,27 +83,18 @@ a:hover {
     border-color: #00e6b8;
 }
 
-.button-secondary {
-    background-color: #ff4081;
-    border-color: #ff4081;
-    color: #0d0d0d;
+/* Tooltip Styles */
+.tooltip {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1000;
 }
 
-.button-secondary:hover {
-    background-color: #e6396f;
-    border-color: #e6396f;
-}
-
-.button-danger {
-    background-color: #ff1744;
-    border-color: #ff1744;
-    color: #0d0d0d;
-}
-
-.button-danger:hover {
-    background-color: #e0143b;
-    border-color: #e0143b;
-}
 /* Footer Styles */
 footer {
     text-align: center;
@@ -117,16 +103,4 @@ footer {
     color: #00ffcc;
     border-top: 1px solid #333;
     margin-top: 30px;
-    font-family: 'Orbitron', sans-serif;
-}
-
-footer a {
-    color: #00ffcc;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-footer a:hover {
-    color: #00bfa5;
-    text-decoration: underline;
 }
