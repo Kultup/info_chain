@@ -1,170 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MRII Chains Information</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <h1>MRII Chains Information</h1>
-    <p><a href="baf.html" class="button">Go to BAF Page</a></p>
     
-    <table>
-        <thead>
-            <tr>
-                <th>№</th>
-                <th>Chain Name</th>
-                <th>Version</th>
-                <th>Notes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>mrii-chain.daocloud.it</td>
-                <td><a href="https://www.daolog.net/syrve/917/917_Chain_BackOffice.zip">Chain</a></td>
-                <td>Чейн</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>mrii-kyiv-2.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/837/837_RMS_BackOffice.zip">837</a></td>
-                <td>Городок</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>mrii-vinnitsa.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">817</a></td>
-                <td>Віниця</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>mrii-kyiv-1.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">817</a></td>
-                <td>Київ</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>mrii-lutsk.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/837/837_RMS_BackOffice.zip">837</a></td>
-                <td>Луцьк</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>mrii-lviv.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/898/898_RMS_BackOffice.zip">888</a></td>
-                <td>Львів</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>mrii-odesa-2.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/837/837_RMS_BackOffice.zip">837</a></td>
-                <td>Меркурій</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>mrii-ternopil.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">817</a></td>
-                <td>Тернопіль</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>mrii-khm.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">817</a></td>
-                <td>Хмельницький</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>mrii-chernivtsi.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">817</a></td>
-                <td>Чернівці</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td>fun-planet.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/836/836_RMS_BackOffice.zip">836</a></td>
-                <td>FUN</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td>mrii-zhytomyr.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/837/837_RMS_BackOffice.zip">837</a></td>
-                <td>Житомир</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>mrii-madagascar.daocloud.it</td>
-                <td><a href="https://www.daolog.net/syrve/817/817_RMS_BackOffice.zip">817</a></td>
-                <td>Мадагаскар</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td>mrii-lviv-2.syrve.online</td>
-                <td><a href="https://www.daolog.net/syrve/898/898_Chain_BackOffice.zip">898</a></td>
-                <td>Львів-2</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="🔍 Пошук...">
+    </div>
+
+    <button class="theme-toggle" id="themeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <p><a href="baf.html" class="button">
+        <i class="fas fa-arrow-right"></i>
+        Перейти до BAF сторінки
+    </a></p>
+    
+    <div class="table-container">
+        <table id="chainsTable">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Chain Name</th>
+                    <th>Version</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>mrii-chain.daocloud.it</td>
+                    <td><a href="https://www.daolog.net/syrve/917/917_Chain_BackOffice.zip">Chain</a></td>
+                    <td>Чейн</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>mrii-kyiv-2.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/837/837_RMS_BackOffice.zip">837</a></td>
+                    <td>Городок</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>mrii-vinnitsa.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">817</a></td>
+                    <td>Віниця</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>mrii-kyiv-1.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">817</a></td>
+                    <td>Київ</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>mrii-lutsk.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/837/837_RMS_BackOffice.zip">837</a></td>
+                    <td>Луцьк</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>mrii-lviv.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/898/898_RMS_BackOffice.zip">888</a></td>
+                    <td>Львів</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>mrii-odesa-2.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/837/837_RMS_BackOffice.zip">837</a></td>
+                    <td>Меркурій</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>mrii-ternopil.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">817</a></td>
+                    <td>Тернопіль</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>mrii-khm.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">817</a></td>
+                    <td>Хмельницький</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>mrii-chernivtsi.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">817</a></td>
+                    <td>Чернівці</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>fun-planet.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/836/836_RMS_BackOffice.zip">836</a></td>
+                    <td>FUN</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>mrii-zhytomyr.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/837/837_RMS_BackOffice.zip">837</a></td>
+                    <td>Житомир</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>mrii-madagascar.daocloud.it</td>
+                    <td><a href="https://www.daolog.net/syrve/817/817_RMS_BackOffice.zip">817</a></td>
+                    <td>Мадагаскар</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>mrii-lviv-2.syrve.online</td>
+                    <td><a href="https://www.daolog.net/syrve/898/898_RMS_BackOffice.zip">898</a></td>
+                    <td>Львів-2</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>mrii-rudne.daocloud.it</td>
+                    <td><a href="https://www.daolog.net/syrve/917/917_Chain_BackOffice.zip">917</a></td>
+                    <td>Рудне</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>mrii-chain-2.daocloud.it</td>
+                    <td><a href="https://www.daolog.net/syrve/917/917_RMS_BackOffice.zip">917</a></td>
+                    <td>Місто</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <h1>Folder Chain Version</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>№</th>
-                <th>Folder Version</th>
-                <th>Locations</th>
-                <th>Download Link</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>817</td>
-                <td>Віниця, Тернопіль, Хмельницький, Чернівці, Київ</td>
-                <td><a href="https://www.daolog.net/syrve/917/917_RMS_OfficeFolder.zip">817 Folder</a></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>837</td>
-                <td>Городок, Луцьк, Меркурій, Житомир</td>
-                <td><a href="https://www.daolog.net/syrve/837/837_RMS_OfficeFolder.zip">837 Folder</a></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>888</td>
-                <td>Львів-1 Львів-2</td>
-                <td><a href="https://www.daolog.net/syrve/898/898_RMS_OfficeFolder.zip">898 Folder</a></td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>836</td>
-                <td>Fun</td>
-                <td><a href="https://www.daolog.net/syrve/836/836_RMS_OfficeFolder.zip">836 Folder</a></td>
-            </tr>
-        </tbody>
-    </table>
-
+    
+    <div class="table-container">
+        <table id="foldersTable">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Folder Version</th>
+                    <th>Locations</th>
+                    <th>Download Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>817</td>
+                    <td>Віниця, Тернопіль, Хмельницький, Чернівці, Київ</td>
+                    <td><a href="https://www.daolog.net/syrve/917/917_RMS_OfficeFolder.zip">817 Folder</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>837</td>
+                    <td>Городок, Луцьк, Меркурій, Житомир</td>
+                    <td><a href="https://www.daolog.net/syrve/837/837_RMS_OfficeFolder.zip">837 Folder</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>888</td>
+                    <td>Львів-1 Львів-2</td>
+                    <td><a href="https://www.daolog.net/syrve/898/898_RMS_OfficeFolder.zip">898 Folder</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>836</td>
+                    <td>Fun</td>
+                    <td><a href="https://www.daolog.net/syrve/836/836_RMS_OfficeFolder.zip">836 Folder</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tooltip" id="tooltip">
+        <i class="fas fa-info-circle"></i>
+        <span id="tooltipText"></span>
+    </div>
     <script>
-        document.querySelectorAll("td").forEach(function(td) {
-            td.addEventListener("click", function() {
-                var text = this.innerText;
-                var textarea = document.createElement("textarea");
-                textarea.value = text;
-                document.body.appendChild(textarea);
-                textarea.select();
-                document.execCommand("copy");
-                document.body.removeChild(textarea);
-        
-                var tooltip = document.createElement("div");
-                tooltip.innerText = "Текст скопирован";
-                tooltip.className = "tooltip";
-                document.body.appendChild(tooltip);
-        
-                setTimeout(function() {
-                    document.body.removeChild(tooltip);
+        // Функція для копіювання тексту
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const tooltip = document.getElementById('tooltip');
+                const tooltipText = document.getElementById('tooltipText');
+                tooltipText.textContent = 'Скопійовано!';
+                tooltip.style.display = 'block';
+                setTimeout(() => {
+                    tooltip.style.display = 'none';
                 }, 2000);
             });
+        }
+
+        // Функція для пошуку
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchText = e.target.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+            
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(searchText) ? '' : 'none';
+            });
+        });
+
+        // Функція для перемикання теми
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Перевіряємо збережену тему
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Змінюємо іконку
+            if (newTheme === 'dark') {
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
         });
     </script>
 </body>
